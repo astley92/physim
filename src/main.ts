@@ -1,5 +1,8 @@
-import './style.css'
+import { setupCanvas } from "./canvas.ts"
+import "./style.css"
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<h1>Hello world</h1>
+<canvas id="canvas"></canvas>
 `
+
+setupCanvas(document.querySelector<HTMLCanvasElement>("#canvas"))
